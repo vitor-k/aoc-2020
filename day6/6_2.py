@@ -7,7 +7,6 @@ def checkPass(filename):
     for line in anslist:
         resbin = (1<<27) - 1
         answers = line.split("\n")
-        print(answers)
         for person in answers:
             if(len(person) == 0):
                 continue
@@ -15,9 +14,7 @@ def checkPass(filename):
             for char in person:
                 ansbin |= 1 << (ord(char) - 97)
             resbin &= ansbin
-        print(str(bin(resbin)))
         ansnums.append(bin(resbin).count("1"))
-    print(ansnums)
     return sum(ansnums)
 
 def main(filename = "input.txt"):

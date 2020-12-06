@@ -8,9 +8,7 @@ def checkPass(filename):
         ansset = set()
         for char in line:
             ansset.add(char)
-        print(ansset)
         ansnums.append(len(ansset))
-    print(ansnums)
     return sum(ansnums)
 
 def main(filename = "input.txt"):
