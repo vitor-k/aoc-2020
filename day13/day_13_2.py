@@ -1,4 +1,3 @@
-import math
 
 def busses(filename):
     with open(filename) as file:
